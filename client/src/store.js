@@ -11,7 +11,7 @@ const store = createStore(
   initialState,
   compose(
     applyMiddleware(...middleware),
-    //window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__() // For React Chrome extension
+    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__() || compose // For React Chrome extension
   )
 );
 

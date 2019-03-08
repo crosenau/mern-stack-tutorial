@@ -24,7 +24,7 @@ export const registerUser = (userData, history) => dispatch => { // function(dis
 // Login - get user token
 export const loginUser = userData => dispatch => {
   axios
-    .post('/api/users/login')
+    .post('/api/users/login', userData)
     .then(res => {
       // Save to localStorage    Is using localStorage for tokens safe?
 
@@ -36,7 +36,7 @@ export const loginUser = userData => dispatch => {
       // Decode token to get user data
       const decoded = jwt_decode(token);
       // Set current user
-      dispatch(setCurentUser(decoded));
+      dispatch(setCurrentUser(decoded));
     })
     .catch(err =>
         dispatch({
