@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 class Landing extends Component {
   render() {
@@ -14,7 +15,8 @@ class Landing extends Component {
               Create a (minimal) full-stack app with user authentication via passport and JWTs
             </p>
             <br />
-            <a
+            <Link
+              to='/register'
               style={{
                 width: '150px',
                 borderRadius: '3px',
@@ -23,8 +25,9 @@ class Landing extends Component {
               className='btn btn-large waves-effect waves-light hoverable blue accent-3'
             >
               Register
-            </a>
-            <a
+            </Link>
+            <Link
+              to='/login'
               style={{
                 margineLeft: '2rem',
                 width: '150px',
@@ -34,7 +37,7 @@ class Landing extends Component {
               className='btn btn-large waves effect white hoverable black-text'
             >
               Log In
-            </a>
+            </Link>
           </div>
         </div>
       </div>
